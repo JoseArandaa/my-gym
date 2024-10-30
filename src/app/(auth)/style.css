@@ -1,0 +1,63 @@
+.cl-card {
+  background: linear-gradient(145deg, #1c1c1e, #292a2d);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.cl-card p,
+.cl-card label {
+  color: white;
+}
+.cl-footerAction .cl-card a {
+  color: #00bfff;
+}
+.cl-footerAction .cl-card a:hover {
+  color: #00bfff;
+}
+.cl-headerTitle {
+  color: white;
+}
+.cl-dividerLine {
+  background-color: white;
+}
+
+.cl-button {
+  background-color: #ff7733;
+  padding: 10px;
+  color: white;
+}
+
+.cl-button:hover {
+  background-color: #f3773a;
+  opacity: 0.95;
+  cursor: pointer;
+}
+.cl-formFieldInput {
+  max-height: none;
+  height: 38px;
+}
+input[type="tel"].cl-formFieldInput {
+  background-color: white;
+  color: black;
+}
+div.cl-phoneInputBox > div > p {
+  background-color: white;
+  color: black;
+}
+.cl-footer {
+  background: transparent;
+}
+.cl-footer span {
+  color: white;
+}
+.cl-footer a {
+  color: #00bfff;
+}
+.cl-footer > div:nth-child(2) {
+  display: none;
+}
+input.cl-input {
+  background-color: white;
+}
