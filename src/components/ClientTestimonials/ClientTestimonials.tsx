@@ -89,7 +89,7 @@ export function ClientTestimonials() {
                   fontStyle="italic"
                   sx={{ mt: "1.5rem" }} // Empujar el texto hacia abajo si es necesario
                 >
-                  "{testimonial.testimonial}"
+                  {`"${testimonial.testimonial}"`}
                 </Typography>
               </CardContent>
             </Card>
