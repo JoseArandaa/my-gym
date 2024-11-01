@@ -3,7 +3,7 @@
 import { MercadoPagoConfig, PreApproval } from "mercadopago";
 
 const client = new MercadoPagoConfig({
-  accessToken: process.env.MERCADO_PAGO_TOKEN!,
+  accessToken: process.env.MERCADO_PAGO_ACCESS_TOKEN as string,
 });
 interface Pack {
   name: string;
