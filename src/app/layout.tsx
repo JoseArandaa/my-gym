@@ -1,6 +1,5 @@
-// src/app/layout.tsx
 "use client";
-import { ClerkProvider, useAuth } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import Nav from "@/components/Nav/Nav";
 import { CssBaseline, Paper, ThemeProvider, createTheme } from "@mui/material";
 import { useState } from "react";
