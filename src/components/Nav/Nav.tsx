@@ -1,6 +1,5 @@
-// src/components/Nav/Nav.tsx
-"use client"; // Asegúrate de que este componente sea tratado como un Client Component
-import { UserButton, useUser, useAuth } from "@clerk/clerk-react";
+"use client";
+import { UserButton, useUser } from "@clerk/clerk-react";
 import Link from "next/link";
 import {
   AppBar,
