@@ -10,10 +10,11 @@ import {
   CircularProgress,
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
-import { onBuy } from "./onBuy";
+import { onSubscribe } from "./onBuy";
 import { useRouter } from "next/navigation";
 import { useDolarApi } from "@/hooks/useDolarApi";
 import { useState } from "react";
+import React from "react";
 export default function PricingCards() {
   const [onBuyFetching, setOnBuyFetching] = useState(false);
   const tiers = [
@@ -54,19 +55,27 @@ export default function PricingCards() {
       ],
     },
   ];
+  interface Pack {
+    name: string;
+    price: number;
+    description: string;
+    features: string[];
+  }
 
   const router = useRouter();
   const { data, loading, error } = useDolarApi();
 
-  const handleBuy = async (tier) => {
+  const handleBuy = async (tier: Pack) => {
     if (!data) {
       console.error("Dolar data is not available.");
       return;
     }
     setOnBuyFetching(true);
     try {
-      const url = await onBuy(tier, data.venta);
-      url && router.push(url);
+      const url = await onSubscribe(tier, data.venta);
+      if (url) {
+        router.push(url);
+      }
     } catch (error) {
       console.error("Error during purchase:", error);
     } finally {
